@@ -1,1 +1,1 @@
-# Interview Aide by Tushar Mohan
+# Interview Aide
