@@ -82,6 +82,7 @@ int main()
         head = enqueue(head, i);
     // print queue
     cout<<"Queue\n";
+    
     Node* ptr = head;
     while(ptr)
     {
