@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// iterative
 void bubbleSort(vector<int>& a, int n)
 {
     int i,j, total_swaps = 0;
@@ -26,12 +27,33 @@ void bubbleSort(vector<int>& a, int n)
     }
     cout<<"Total Swaps : "<<total_swaps<<endl;
 }
+
+// recursive
+void bubbleSortRec(vector<int>& a, int n)
+{
+    if(n==1)
+        return;
+    
+    for(int i=0;i<n-1;i++)
+    {
+        if(a[i]>a[i+1])
+            swap(a[i], a[i+1]);
+    }
+
+    bubbleSortRec(a,n-1);
+}
 int main()
 {
 
     vector<int> a = {5,4,2,1,3};
     int n =5;
-    bubbleSort(a, n);
+    
+    // iterative
+    // bubbleSort(a, n);
+    
+    // recursive
+    bubbleSortRec(a, n);
+    
     cout<<"Final state:\n";
     for(int i=0;i<n;i++)
     {
