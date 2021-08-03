@@ -4,7 +4,7 @@ using namespace std;
 ListNode* reverse(ListNode* head)
 {
     ListNode* current = head;
-    ListNode* prev, *next;
+    ListNode* prev=NULL, *next=NULL;
     while(current)
     {
         next = current->next;
