@@ -1,7 +1,7 @@
 struct greater1{
-  bool operator()(const int& a,const int& b) const{
+    bool operator()(const int& a,const int& b) const{
         return a>b;
-  }
+    }
 };
 class SeatManager {
 public:

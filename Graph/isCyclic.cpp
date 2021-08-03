@@ -41,7 +41,7 @@ bool isNotcyclicUtil(vector<vector<int>>& graph, vector<int>& visited, int ind)
     {
         if(visited[ind]==2)
             continue;
-        if(visited[i]==1 || !cyclicUtil(graph, visited, i)){
+        if(visited[i]==1 || !isNotcyclicUtil(graph, visited, i)){
             return false;
         }
     }

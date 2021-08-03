@@ -53,8 +53,8 @@ int main()
 {
 
     
-    vector<int> a = {5,4,2,1,3};
-    int n =5;
+    vector<int> a = {0, 3, 4};
+    int n =3;
     
     mergeSort(a, 0, n-1);
     

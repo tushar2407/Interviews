@@ -10,6 +10,7 @@ void selectionSort(vector<int>& a, int n)
     for(i=0;i<n;i++)
     {
         min_idx = i;
+        
         for(j=i+1;j<n;j++)
             if(a[min_idx]>a[j])
                 min_idx = j;
