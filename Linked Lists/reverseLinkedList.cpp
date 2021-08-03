@@ -9,7 +9,7 @@ ListNode* reverse(ListNode* head)
     {
         next = current->next;
         current->next = prev;
-        prev=currentl
+        prev=current;
         current = next;
     }
     return head=prev;
