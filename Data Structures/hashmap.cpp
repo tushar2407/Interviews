@@ -20,15 +20,15 @@ class Hash
         int index = hashfunction(key);
         l[index].push_back({key, value});
     }
-    bool get(int key)
+    int get(int key)
     {
         int idx = hashfunction(key);
         for(auto &i: l[idx] )
         {
             if(i.first==key)
-                return true;
+                return i.second;
         }
-        return false;
+        return -1;
     }
     void del(int key)
     {
@@ -57,7 +57,7 @@ class Hash
 };
 int main()
 {
-    int a[] = {15, 11, 27, 8, 12};
+    int a[] = {14, 7, 21, 0, 28};
     int n = sizeof(a)/sizeof(a[0]);
   
     Hash h(7);
@@ -67,6 +67,8 @@ int main()
     h.del(12);
     
     h.display();
+
+    cout<<h.get(15)<<endl;
 
     return 0;
 }
