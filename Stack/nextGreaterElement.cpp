@@ -1,5 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
+// gives the next greater "element"
+vector<long long> nextLargerElement(vector<long long> arr, int n){
+    // Your code here
+    stack<long long> st;
+    st.push(0);
+    vector<long long> res(n, -1);
+    for(int i=1;i<n;i++)
+    {
+        while(!st.empty() && arr[i]>arr[st.top()])
+        {
+            res[st.top()] = arr[i];
+            st.pop();
+        }
+        st.push(i);
+    }
+    return res;
+}
+// tells how many "indexes" later is the next greater element
 vector<int> dailyTemperatures(vector<int>& T) {
     vector<int> stack;
     stack.push_back(0);
